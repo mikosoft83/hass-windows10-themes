@@ -2,6 +2,8 @@
 
 > By Milan Korenica - mikosoft83
 
+Here are 23 themes based on Windows 10 look. All the themes are the same apart for accent color. All the colors are taken straight from W10 accent color picker and UI elements. 
+
 ## Screenshots
 
 ![1](https://raw.githubusercontent.com/mikosoft83/hass-windows10-themes/w10ss1.png)
