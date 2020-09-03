@@ -1,0 +1,88 @@
+# Theme for Home Assistant 
+# Based on Windows 10 fluent design
+# Created by mikosoft83: https://github.com/mikosoft83
+#
+Windows 10 Purple Shadow Dark:
+  # Main Interface Colors
+  primary-color: rgb(107, 105, 214)
+  light-primary-color: rgb(123, 122, 219)
+  primary-background-color: rgb(255, 255, 255)
+  secondary-background-color: rgb(243, 243, 243)
+  divider-color: rgb(229, 229, 229)
+  accent-color: var(--primary-color)
+  # Header:
+  app-header-background-color: var(--primary-color)
+  app-header-text-color: rgb(255, 255, 255)
+  paper-tabs-selection-bar-color: rgb(255, 255, 255)
+  # UI
+  paper-card-header-color: var(--primary-color)                                    # Title in settings
+  # Text
+  primary-text-color: rgb(0, 0, 0)
+  secondary-text-color: rgb(102, 102, 102)
+  text-primary-color: rgb(255, 255, 255)
+  disabled-text-color: rgb(199, 199, 204)
+  # Sidebar Menu
+  paper-listbox-background-color: var(--background-color)
+  sidebar-icon-color: var(--disabled-text-color)
+  sidebar-text-color: var(--primary-background-color)
+  sidebar-background-color: rgb(60, 67, 71)
+  sidebar-selected-background-color: rgb(78, 88, 96)
+  sidebar-selected-icon-color: var(--text-primary-color)
+  sidebar-selected-text-color: var(--sidebar-selected-icon-color)
+  paper-item-border-radius: 0px
+  # Buttons
+  paper-item-icon-color: var(--primary-text-color)
+  paper-item-icon-active-color: var(--primary-color)
+  # States and Badges
+  state-icon-color: var(--primary-text-color)
+  state-icon-active-color: var(--primary-color)
+  state-icon-unavailable-color: var(--disabled-text-color)
+  # Sliders
+  paper-slider-knob-color: var(--primary-color)
+  paper-slider-knob-start-color: var(--paper-slider-knob-color)
+  paper-slider-pin-color: var(--primary-color)
+  paper-slider-active-color: var(--primary-color)
+  paper-slider-secondary-color: var(--disabled-text-color)
+  # Labels
+  label-badge-background-color: var(--primary-background-color)
+  label-badge-text-color: var(--primary-text-color)
+  label-badge-red: rgb(232, 17, 35)
+  label-badge-green: rgb(73, 130, 5)
+  label-badge-blue: rgb(0, 99, 177)
+  label-badge-yellow: rgb(255, 185, 0)
+  label-badge-gray: rgb(118, 118, 118)
+  # Cards
+  card-background-color: var(--secondary-background-color)
+  ha-card-border-radius: "0px"
+  ha-card-box-shadow: none
+  paper-dialog-background-color: var(--card-background-color)
+  paper-listbox-background-color: var(--card-background-color)
+  paper-card-background-color: var(--card-background-color)
+  # Switches
+  switch-checked-button-color: var(--primary-color)
+  switch-checked-track-color:  var(--primary-color)
+  switch-unchecked-button-color: var(--disabled-text-color)
+  switch-unchecked-track-color: var(--disabled-text-color)
+  # Toggles
+  paper-toggle-button-checked-button-color: var(--switch-checked-button-color)
+  paper-toggle-button-checked-bar-color: var(--switch-checked-track-color)
+  paper-toggle-button-unchecked-button-color: var(--switch-unchecked-button-color)
+  paper-toggle-button-unchecked-bar-color: var(--switch-unchecked-track-color)
+  # Table
+  table-row-background-color: var(--primary-background-color)
+  table-row-alternative-background-color: var(--secondary-background-color)
+  data-table-background-color: var(--primary-background-color)
+  # Dropdowns
+  material-background-color: var(--primary-background-color)
+  material-secondary-background-color: var(--secondary-background-color)
+  mdc-theme-surface: var(--primary-background-color)
+  # Pre/Code
+  markdown-code-background-color: var(--secondary-background-color)
+  # Time Picker Card
+  time-picker-elements-background-color: var(--primary-background-color)
+  time-picker-text-color: var(--primary-text-color)
+  time-picker-icon-color: var(--primary-color)
+  # Bar Card
+  bar-card-color: var(--light-primary-color)
+  bar-card-border-radius: 0px
+  bar-card-disabled-color: var(--disabled-text-color)
