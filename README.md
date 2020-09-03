@@ -6,13 +6,13 @@ Here are 23 themes based on Windows 10 look. All the themes are the same apart f
 
 ## Screenshots
 
-![1](https://raw.githubusercontent.com/mikosoft83/hass-windows10-themes/w10ss1.png)
+![1](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w10ss1.png)
 
-![2](https://raw.githubusercontent.com/mikosoft83/hass-windows10-themes/w10ss2.png)
+![2](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w10ss2.png)
 
-![3](https://raw.githubusercontent.com/mikosoft83/hass-windows10-themes/w10ss3.png)
+![3](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w10ss3.png)
 
-![4](https://raw.githubusercontent.com/mikosoft83/hass-windows10-themes/w10ss4.png)
+![4](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w10ss4.png)
 
 ## Caveats
 
