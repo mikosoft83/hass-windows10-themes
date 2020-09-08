@@ -4,6 +4,21 @@
 
 Here are 23 themes based on Windows 10 look. All the themes are the same apart for accent color. All the colors are taken straight from W10 accent color picker and UI elements. 
 
+## New version!
+
+Added styling for:
+
+- HACS
+- [Bar card](https://github.com/custom-cards/bar-card)
+- [Time picker](https://github.com/GeorgeSG/lovelace-time-picker-card)
+
+And now the themes are also supercharged using [card-mod](https://github.com/thomasloven/lovelace-card-mod)! Elements styled are:
+
+- Badges
+- Fonts
+- More info dialog
+- [Vacuum card](https://github.com/denysdovhan/vacuum-card) by Denys Dovhan
+
 ## Screenshots
 
 ![1](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w102ss1.png)
