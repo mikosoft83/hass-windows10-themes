@@ -6,13 +6,17 @@ Here are 23 themes based on Windows 10 look. All the themes are the same apart f
 
 ## Screenshots
 
-![1](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w10ss1.png)
+![1](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w102ss1.png)
 
-![2](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w10ss2.png)
+![2](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w102ss2.png)
 
-![3](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w10ss3.png)
+![3](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w102ss3.png)
 
-![4](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w10ss4.png)
+![4](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w102ss4.png)
+
+![5](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w102ss5.png)
+
+![6](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w102ss6.png)
 
 ## Caveats
 
@@ -20,7 +24,8 @@ The theme doesn't play well with some elements (e.g. search in HACS, some tabbed
 
 ## TODO
 
-HACS styling.
+Acrylic
+Dark theme
 
 ## Installation
 
