@@ -9,8 +9,8 @@ Here are 23 themes based on Windows 10 look. All the themes are the same apart f
 Added styling for:
 
 - HACS
-- [Bar card](https://github.com/custom-cards/bar-card)
-- [Time picker](https://github.com/GeorgeSG/lovelace-time-picker-card)
+- [Bar card](https://github.com/custom-cards/bar-card) (available also in HACS)
+- [Time picker](https://github.com/GeorgeSG/lovelace-time-picker-card) (also in HACS)
 
 And now the themes are also supercharged using [card-mod](https://github.com/thomasloven/lovelace-card-mod)! Elements styled are:
 
@@ -18,6 +18,8 @@ And now the themes are also supercharged using [card-mod](https://github.com/tho
 - Fonts
 - More info dialog
 - [Vacuum card](https://github.com/denysdovhan/vacuum-card) by Denys Dovhan
+
+I highly recommend installing card-mod (available in HACS) to fully embrace this theme.
 
 ## Screenshots
 
