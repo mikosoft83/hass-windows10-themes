@@ -3,6 +3,14 @@
 # Created by mikosoft83: https://github.com/mikosoft83
 #
 Windows 10 Violet Red:
+  # Card mod theming
+  card-mod-theme: Windows 10 Violet Red
+  # Font
+  paper-font-common-base_-_font-family: Segoe UI, sans-serif
+  paper-font-common-base_-_-webkit-font-smoothing: subpixel-antialiased
+  paper-font-common-code_-_font-family: Lucida Console, Consolas, monospace
+  paper-font-common-code_-_-webkit-font-smoothing: subpixel-antialiased
+  paper-font-common-expensive-kerning_-_text-rendering: optimizeLegibility
   # Main Interface Colors
   primary-color: rgb(136, 23, 152)
   light-primary-color: rgb(150, 50, 164)
@@ -22,7 +30,6 @@ Windows 10 Violet Red:
   text-primary-color: rgb(255, 255, 255)
   disabled-text-color: rgb(199, 199, 204)
   # Sidebar Menu
-  paper-listbox-background-color: var(--background-color)
   sidebar-icon-color: var(--disabled-text-color)
   sidebar-text-color: var(--primary-background-color)
   sidebar-background-color: rgb(60, 67, 71)
@@ -56,7 +63,7 @@ Windows 10 Violet Red:
   ha-card-border-radius: "0px"
   ha-card-box-shadow: none
   paper-dialog-background-color: var(--card-background-color)
-  paper-listbox-background-color: var(--card-background-color)
+  paper-listbox-background-color: var(--background-color)
   paper-card-background-color: var(--card-background-color)
   # Switches
   switch-checked-button-color: var(--primary-color)
@@ -86,3 +93,108 @@ Windows 10 Violet Red:
   bar-card-color: var(--light-primary-color)
   bar-card-border-radius: 0px
   bar-card-disabled-color: var(--disabled-text-color)
+  # HACS
+  hacs-badge-color: var(--light-primary-color)
+  hacs-status-installed: var(--label-badge-green)
+  hacs-status-pending-restart: var(--label-badge-red)
+  hacs-status-pending-update: var(--label-badge-yellow)
+  hacs-status-not-loaded: var(--disabled-text-color)
+  hacs-new-color: var(--primary-color)
+  link-text-color: var(--primary-color)
+  # card mod
+  # Badges aligned left
+  card-mod-view: |
+    #badges {
+      display: flex !important;
+      justify-content: flex-start;
+      margin: 0px !important;
+    }
+  # Badge
+  card-mod-badge-yaml: |
+    .: |
+      :host {
+        background-color: var(--secondary-background-color);
+        border-radius: 0px;
+        border: 0px;
+        padding: 0px;
+        margin: 4px;
+        box-shadow: none;
+      }
+    ha-state-label-badge:
+      $:
+        ha-label-badge:
+          $:
+            .: |
+              .badge-container .label-badge {
+                height: 3.5em;
+                color: var(--primary-color);
+                border-radius: 0px;
+                background: none;
+                border: 0px;
+                border-bottom: solid 1px;
+              }
+              .badge-container .label-badge .label {
+                position: static;
+              }
+              .badge-container .label-badge .label span {
+                border-radius: 0px;
+                width: 100%;
+                background: none;
+                color: var(--primary-color);
+              }
+              .badge-container .title {
+                height: 100%;
+                vertical-align: bottom;
+                margin-top: 5% !important;
+                margin-bottom: 5% !important;
+                /*margin: 0px !important;
+                padding: 5%;
+                width: auto !important;*/
+                position: static;
+              }
+  # More info popup
+  card-mod-more-info-yaml: |
+    $: |
+      .mdc-dialog .mdc-dialog__container .mdc-dialog__surface {
+        box-shadow: none;
+        border-radius: 0px;
+      }
+    ha-header-bar:
+      $: |
+        .mdc-top-app-bar {
+          background: var(--primary-color) !important;
+          color: var(--primary-background-color) !important;
+        }   
+  # Misc cards
+  card-mod-card: |
+    /* Custom vacuum card*/
+    ha-card.type-custom-vacuum-card {
+      border-radius: 0px;
+    }
+    ha-card.type-custom-vacuum-card .preview {
+      background: none;
+    }
+    ha-card.type-custom-vacuum-card .header {
+      color: var(--primary-text-color)
+    }
+    ha-card.type-custom-vacuum-card .status-text {
+      color: var(--primary-text-color)
+    }
+    ha-card.type-custom-vacuum-card ha-icon {
+      color: var(--primary-text-color)
+    }
+    ha-card.type-custom-vacuum-card .stats {
+      color: var(--primary-text-color)
+    }
+    ha-card.type-custom-vacuum-card .vacuum-name {
+      color: var(--primary-text-color)
+    }
+    ha-card.type-custom-vacuum-card .not-available {
+      color: var(--disabled-text-color)
+    }
+    ha-card.type-custom-vacuum-card .source {
+      color: var(--primary-color)
+    }
+    ha-card.type-custom-vacuum-card .source ha-icon {
+      color: var(--primary-color)
+    }

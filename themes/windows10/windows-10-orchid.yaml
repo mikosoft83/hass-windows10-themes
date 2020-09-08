@@ -2,9 +2,9 @@
 # Based on Windows 10 fluent design
 # Created by mikosoft83: https://github.com/mikosoft83
 #
-Windows 10 Pale Moss:
+Windows 10 Orchid:
   # Card mod theming
-  card-mod-theme: Windows 10 Pale Moss
+  card-mod-theme: Windows 10 Orchid
   # Font
   paper-font-common-base_-_font-family: Segoe UI, sans-serif
   paper-font-common-base_-_-webkit-font-smoothing: subpixel-antialiased
@@ -12,8 +12,8 @@ Windows 10 Pale Moss:
   paper-font-common-code_-_-webkit-font-smoothing: subpixel-antialiased
   paper-font-common-expensive-kerning_-_text-rendering: optimizeLegibility
   # Main Interface Colors
-  primary-color: rgb(86, 124, 115)
-  light-primary-color: rgb(105, 138, 130)
+  primary-color: rgb(154, 0, 137)
+  light-primary-color: rgb(165, 28, 150)
   primary-background-color: rgb(255, 255, 255)
   secondary-background-color: rgb(243, 243, 243)
   divider-color: rgb(229, 229, 229)
