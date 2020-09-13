@@ -2,7 +2,7 @@
 
 > By Milan Korenica - mikosoft83
 
-Here are 23 themes based on Windows 10 look. All the themes are the same apart for accent color. All the colors are taken straight from W10 accent color picker and UI elements. 
+Here are 49 themes based on Windows 10 look. All the themes are the same apart for accent color, and light/dark mode. All the colors are taken straight from Windows 10 accent color picker and UI elements. 
 
 ## New version!
 
@@ -23,17 +23,17 @@ I highly recommend installing card-mod (available in HACS) to fully embrace this
 
 ## Screenshots
 
-![1](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w102ss1.png)
+![blue](w102ss1.png)
 
-![2](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w102ss2.png)
+![red](w102ss2.png)
 
-![3](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w102ss3.png)
+![green](w102ss3.png)
 
-![4](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w102ss4.png)
+![purple](w102ss4.png)
 
-![5](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w102ss5.png)
+![orange](w102ss5.png)
 
-![6](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w102ss6.png)
+![yellow](w102ss6.png)
 
 ## Caveats
 
@@ -41,8 +41,7 @@ The theme doesn't play well with some elements (e.g. search in HACS, some tabbed
 
 ## TODO
 
-Acrylic
-Dark theme
+- Acrylic
 
 ## Installation
 
