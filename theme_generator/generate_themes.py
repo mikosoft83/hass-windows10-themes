@@ -116,6 +116,8 @@ for mode in ["Dark", "Light"]:
         light_primary_ui_color = [round(color) for color in light_primary_ui_color]
         light_primary_ui_color = [str(color) for color in theme_color]
         light_primary_ui_color = f"rgb({', '.join(light_primary_ui_color)})"
-        with open(fr".\themes\windows10\{theme_name.lower().replace(' ', '-')}.yaml", "w") as theme_file:
+        with open(
+            fr".\themes\windows10\{theme_name.lower().replace(' ', '-')}.yaml", "w"
+        ) as theme_file:
             theme_file.write(eval(template_f_string) + "# card mod" + template[1])
             print("Wrote to " + theme_file.name)
