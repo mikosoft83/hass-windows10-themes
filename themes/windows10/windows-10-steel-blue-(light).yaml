@@ -13,10 +13,10 @@ Windows 10 Steel Blue (Light):
   paper-font-common-expensive-kerning_-_text-rendering: optimizeLegibility
   # Main Interface Colors
   primary-color: rgb(104, 118, 138)
-  light-primary-color: rgb(104, 118, 138)
+  light-primary-color: rgb(121, 133, 150)
   primary-background-color: rgb(255, 255, 255)
   secondary-background-color: rgb(243, 243, 243)
-  divider-color: var(--primary-color)
+  divider-color: rgb(102, 102, 102)
   accent-color: var(--primary-color)
   # Header:
   app-header-background-color: var(--primary-color)
@@ -28,11 +28,11 @@ Windows 10 Steel Blue (Light):
   primary-text-color: rgb(0, 0, 0)
   secondary-text-color: rgb(100, 100, 100)
   text-primary-color: rgb(255, 255, 255)
-  disabled-text-color: var(--secondary-text-color)
+  disabled-text-color: rgb(110, 110, 110)
   # Sidebar Menu
   sidebar-icon-color: var(--secondary-text-color)
-  sidebar-text-color: var(--secondary-text-color)
-  sidebar-background-color: var(--primary-background-color)
+  sidebar-text-color: var(--primary-text-color)
+  sidebar-background-color: var(--secondary-background-color)
   sidebar-selected-background-color: var(--secondary-background-color)
   sidebar-selected-icon-color: var(--primary-color)
   sidebar-selected-text-color: var(--sidebar-selected-icon-color)
@@ -193,4 +193,16 @@ Windows 10 Steel Blue (Light):
     }
     ha-card.type-custom-vacuum-card .source ha-icon {
       color: var(--primary-color)
+    }
+    /* Custom mini graph card*/
+    ha-card.type-custom-mini-graph-card .graph__labels > span {
+      box-shadow: none !important;
+      border-radius: 0 !important;
+      padding: 0.05em 0.5em !important;
+      background-color: var(--primary-color) !important;
+      color: var(--primary-background-color) !important;
+    }
+    ha-card.type-custom-mini-graph-card .name .ellipsis {
+      opacity: 1 !important;
+      font-weight: normal !important;
     }
