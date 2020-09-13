@@ -23,17 +23,17 @@ I highly recommend installing card-mod (available in HACS) to fully embrace this
 
 ## Screenshots
 
-![1](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w102ss1.png)
+![blue](w102ss1.png)
 
-![2](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w102ss2.png)
+![red](w102ss2.png)
 
-![3](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w102ss3.png)
+![green](w102ss3.png)
 
-![4](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w102ss4.png)
+![purple](w102ss4.png)
 
-![5](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w102ss5.png)
+![orange](w102ss5.png)
 
-![6](https://github.com/mikosoft83/hass-windows10-themes/raw/master/w102ss6.png)
+![yellow](w102ss6.png)
 
 ## Caveats
 
@@ -41,8 +41,8 @@ The theme doesn't play well with some elements (e.g. search in HACS, some tabbed
 
 ## TODO
 
-Acrylic
-Dark theme
+- Acrylic
+0 Dark theme
 
 ## Installation
 
