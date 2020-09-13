@@ -2,9 +2,9 @@
 # Based on Windows 10 fluent design
 # Created by mikosoft83: https://github.com/mikosoft83
 #
-Windows 10 Purple Shadow Dark:
+Windows 10 Iris Spring Dark:
   # Card mod theming
-  card-mod-theme: Windows 10 Purple Shadow Dark
+  card-mod-theme: Windows 10 Iris Spring Dark
   # Font
   paper-font-common-base_-_font-family: Segoe UI, sans-serif
   paper-font-common-base_-_-webkit-font-smoothing: subpixel-antialiased
@@ -12,8 +12,8 @@ Windows 10 Purple Shadow Dark:
   paper-font-common-code_-_-webkit-font-smoothing: subpixel-antialiased
   paper-font-common-expensive-kerning_-_text-rendering: optimizeLegibility
   # Main Interface Colors
-  primary-color: rgb(107, 105, 214)
-  light-primary-color: rgb(107, 105, 214)
+  primary-color: rgb(116, 77, 169)
+  light-primary-color: rgb(116, 77, 169)
   primary-background-color: rgb(26, 26, 26)
   secondary-background-color: rgb(38, 38, 38)
   divider-color: var(--primary-color)
