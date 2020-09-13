@@ -107,7 +107,7 @@ for mode in ["Dark", "Light"]:
         "Violet Red Light": [177, 70, 194],
         "Yellow Gold": [255, 185, 0],
     }.items():
-        theme_name = f"Windows 10 {theme_color_name} - {mode}"
+        theme_name = f"Windows 10 {theme_color_name} ({mode})"
         primary_ui_color = [str(color) for color in theme_color]
         primary_ui_color = f"rgb({', '.join(primary_ui_color)})"
         h, s, v = rgb_to_hsv(*theme_color)
