@@ -2,7 +2,7 @@
 
 > By Milan Korenica - mikosoft83
 
-Here are 23 themes based on Windows 10 look. All the themes are the same apart for accent color. All the colors are taken straight from W10 accent color picker and UI elements. 
+Here are 49 themes based on Windows 10 look. All the themes are the same apart for accent color, and light/dark mode. All the colors are taken straight from Windows 10 accent color picker and UI elements. 
 
 ## New version!
 
@@ -42,7 +42,6 @@ The theme doesn't play well with some elements (e.g. search in HACS, some tabbed
 ## TODO
 
 - Acrylic
-0 Dark theme
 
 ## Installation
 
