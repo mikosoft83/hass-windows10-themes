@@ -102,12 +102,13 @@ Windows 10 Blue Gray (Light):
   link-text-color: var(--primary-color)
   # card mod
   # Badges aligned left
-  card-mod-view: |
-    #badges {
+  card-mod-view-yaml: |
+    "*:first-child$": |
+      #badges {
       display: flex !important;
       justify-content: flex-start;
       margin: 0px !important;
-    }
+      }
   # Badge
   card-mod-badge-yaml: |
     .: |
@@ -205,4 +206,9 @@ Windows 10 Blue Gray (Light):
     ha-card.type-custom-mini-graph-card .name .ellipsis {
       opacity: 1 !important;
       font-weight: normal !important;
+    }
+    /* Custom ZHA Network Card */
+    ha-card.type-custom-zha-network-card th {
+      background-color: var(--primary-color);
+      color: var(--primary-background-color);
     }
