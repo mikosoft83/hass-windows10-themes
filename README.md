@@ -4,10 +4,6 @@
 
 Here are 49 themes based on Windows 10 look. All the themes are the same apart for accent color, and light/dark mode. All the colors are taken straight from Windows 10 accent color picker and UI elements. 
 
-## What is new:
-
-Big update to the themes, backgrounds inspired by KTibow's pull.
-
 Themes style:
 
 - [HACS](https://hacs.xyz/)
