@@ -104,7 +104,7 @@ Windows 10 Mint Light (Light):
   # Badges aligned left
   card-mod-view-yaml: |
     "*:first-child$": |
-      #badges {
+      .badges, #badges {
       display: flex !important;
       justify-content: flex-start;
       margin: 0px !important;
