@@ -5,6 +5,20 @@
 {theme_name}:
   # Card mod theming
   card-mod-theme: {theme_name}
+  # Light/dark mode support
+  modes:
+    light:
+      primary-background-color: rgb(255, 255, 255)
+      secondary-background-color: rgb(243, 243, 243)
+      primary-text-color: rgb(0, 0, 0)
+      secondary-text-color: rgb(100, 100, 100)
+      sidebar-selected-icon-color: var(--primary-color)
+    dark:
+      primary-background-color: rgb(0, 0, 0)
+      secondary-background-color: rgb(21, 21, 21)
+      primary-text-color: rgb(255, 255, 255)
+      secondary-text-color: rgb(180, 180, 180)
+      sidebar-selected-icon-color: var(--light-primary-color)
   # Font
   paper-font-common-base_-_font-family: Segoe UI, sans-serif
   paper-font-common-base_-_-webkit-font-smoothing: subpixel-antialiased
@@ -14,8 +28,8 @@
   # Main Interface Colors
   primary-color: {primary_ui_color}
   light-primary-color: {light_primary_ui_color}
-  primary-background-color: {primary_background_color}
-  secondary-background-color: {secondary_background_color}
+  primary-background-color: rgb(255, 255, 255)
+  secondary-background-color: rgb(243, 243, 243)
   divider-color: rgb(102, 102, 102)
   accent-color: var(--primary-color)
   # Header:
@@ -25,8 +39,8 @@
   # UI
   ha-card-header-color: var(--primary-color) # Title in settings
   # Text
-  primary-text-color: {text_color}
-  secondary-text-color: {secondary_text_color}
+  primary-text-color: rgb(0, 0, 0)
+  secondary-text-color: rgb(100, 100, 100)
   text-primary-color: rgb(255, 255, 255)
   disabled-text-color: rgb(110, 110, 110)
   # Sidebar Menu
@@ -34,7 +48,7 @@
   sidebar-text-color: var(--primary-text-color)
   sidebar-background-color: var(--secondary-background-color)
   sidebar-selected-background-color: var(--secondary-background-color)
-  sidebar-selected-icon-color: {sidebar_sel_icon_color}
+  sidebar-selected-icon-color: var(--primary-color)
   sidebar-selected-text-color: var(--sidebar-selected-icon-color)
   # Buttons
   paper-item-icon-color: var(--primary-text-color)
@@ -102,12 +116,13 @@
   link-text-color: var(--primary-color)
   # card mod
   # Badges aligned left
-  card-mod-view: |
-    #badges {
+  card-mod-view-yaml: |
+    "*:first-child$": |
+      .badges, #badges {
       display: flex !important;
       justify-content: flex-start;
       margin: 0px !important;
-    }
+      }
   # Badge
   card-mod-badge-yaml: |
     .: |
@@ -205,4 +220,9 @@
     ha-card.type-custom-mini-graph-card .name .ellipsis {
       opacity: 1 !important;
       font-weight: normal !important;
+    }
+    /* Custom ZHA Network Card */
+    ha-card.type-custom-zha-network-card th {
+      background-color: var(--primary-color);
+      color: var(--primary-background-color);
     }
