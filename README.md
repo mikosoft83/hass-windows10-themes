@@ -2,7 +2,7 @@
 
 > By Milan Korenica - mikosoft83
 
-Here are 49 themes based on Windows 10 look. All the themes are the same apart for accent color, and light/dark mode. All the colors are taken straight from Windows 10 accent color picker and UI elements. 
+Here are 49 themes based on Windows 10 look. All the themes are the same apart for accent color and support light/dark mode selection (if you are using HA version older than 2021.6 only light mode will be available). All the colors are taken straight from Windows 10 accent color picker and UI elements. 
 
 Themes style:
 
