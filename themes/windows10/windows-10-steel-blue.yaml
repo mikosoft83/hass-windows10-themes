@@ -241,52 +241,106 @@ Windows 10 Steel Blue:
           color: var(--primary-background-color) !important;
         }   
   # Misc cards
-  card-mod-card: |
-    /* Custom vacuum card */
-    ha-card.type-custom-vacuum-card {
-      border-radius: 0px;
-    }
-    ha-card.type-custom-vacuum-card .preview {
-      background: none;
-    }
-    ha-card.type-custom-vacuum-card .header {
-      color: var(--primary-text-color)
-    }
-    ha-card.type-custom-vacuum-card .status-text {
-      color: var(--primary-text-color)
-    }
-    ha-card.type-custom-vacuum-card ha-icon {
-      color: var(--primary-text-color)
-    }
-    ha-card.type-custom-vacuum-card .stats {
-      color: var(--primary-text-color)
-    }
-    ha-card.type-custom-vacuum-card .vacuum-name {
-      color: var(--primary-text-color)
-    }
-    ha-card.type-custom-vacuum-card .not-available {
-      color: var(--disabled-text-color)
-    }
-    ha-card.type-custom-vacuum-card .source {
-      color: var(--primary-color)
-    }
-    ha-card.type-custom-vacuum-card .source ha-icon {
-      color: var(--primary-color)
-    }
-    /* Custom mini graph card*/
-    ha-card.type-custom-mini-graph-card .graph__labels > span {
-      box-shadow: none !important;
-      border-radius: 0 !important;
-      padding: 0.05em 0.5em !important;
-      background-color: var(--primary-color) !important;
-      color: var(--primary-background-color) !important;
-    }
-    ha-card.type-custom-mini-graph-card .name .ellipsis {
-      opacity: 1 !important;
-      font-weight: normal !important;
-    }
-    /* Custom ZHA Network Card */
-    ha-card.type-custom-zha-network-card th {
-      background-color: var(--primary-color);
-      color: var(--primary-background-color);
-    }
+  card-mod-card-yaml: |
+    .: |
+      /* Custom vacuum card */
+      ha-card.type-custom-vacuum-card {
+        border-radius: 0px;
+      }
+      ha-card.type-custom-vacuum-card .preview {
+        background: none;
+      }
+      ha-card.type-custom-vacuum-card .header {
+        color: var(--primary-text-color)
+      }
+      ha-card.type-custom-vacuum-card .status-text {
+        color: var(--primary-text-color)
+      }
+      ha-card.type-custom-vacuum-card ha-icon {
+        color: var(--primary-text-color)
+      }
+      ha-card.type-custom-vacuum-card .stats {
+        color: var(--primary-text-color)
+      }
+      ha-card.type-custom-vacuum-card .vacuum-name {
+        color: var(--primary-text-color)
+      }
+      ha-card.type-custom-vacuum-card .not-available {
+        color: var(--disabled-text-color)
+      }
+      ha-card.type-custom-vacuum-card .source {
+        color: var(--primary-color)
+      }
+      ha-card.type-custom-vacuum-card .source ha-icon {
+        color: var(--primary-color)
+      }
+      /* Custom mini graph card*/
+      ha-card.type-custom-mini-graph-card .graph__labels > span {
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0.05em 0.5em !important;
+        background-color: var(--primary-color) !important;
+        color: var(--primary-background-color) !important;
+      }
+      ha-card.type-custom-mini-graph-card .name .ellipsis {
+        opacity: 1 !important;
+        font-weight: normal !important;
+      }
+      /* Custom ZHA Network Card */
+      ha-card.type-custom-zha-network-card th {
+        background-color: var(--primary-color);
+        color: var(--primary-background-color);
+      }
+    # Custom sonos card
+    sonos-player$: 
+      .: |
+        .header, .controls {
+           border-radius: 0px !important;
+         }
+      sonos-player-controls$: 
+        sonos-volume$: 
+          ha-control-slider$: |
+            [class*="slider"] {
+              border-radius: 0px !important;
+            }
+            .slider .slider-track-bar {
+              top: 40% !important;
+              bottom: 0px !important;
+              height: 20% !important;
+            }
+            .slider .slider-track-bar::after {
+              top: 0px !important;
+              bottom: 0px !important;
+              right: 0px !important;
+              height: 200% !important;
+              aspect-ratio: 1 / 1 !important;
+              background-color: var(--primary-text-color) !important;
+              // border-radius: 50%;
+            }
+    sonos-volumes$: 
+      sonos-volume$: 
+        ha-control-slider$: |
+          [class*="slider"] {
+            border-radius: 0px !important;
+          }
+          .slider .slider-track-bar {
+            top: 40% !important;
+            bottom: 0px !important;
+            height: 20% !important;
+          }
+          .slider .slider-track-bar::after {
+            top: 0px !important;
+            bottom: 0px !important;
+            right: 0px !important;
+            height: 200% !important;
+            aspect-ratio: 1 / 1 !important;
+            background-color: var(--primary-text-color) !important;
+            // border-radius: 50%;
+          }
+
+  card-mod-row-yaml: |
+    # Square icon
+    "*:first-child$": |
+      state-badge {
+        border-radius: 0% !important;
+      }
