@@ -2,9 +2,9 @@
 # Based on Windows 10 fluent design
 # Created by mikosoft83: https://github.com/mikosoft83
 #
-{theme_name}:
+Windows 10 Mint Dark:
   # Card mod theming
-  card-mod-theme: {theme_name}
+  card-mod-theme: Windows 10 Mint Dark
   # Light/dark mode support
   modes:
     light:
@@ -26,8 +26,8 @@
   paper-font-common-code_-_-webkit-font-smoothing: subpixel-antialiased
   paper-font-common-expensive-kerning_-_text-rendering: optimizeLegibility
   # Main Interface Colors
-  primary-color: {primary_ui_color}
-  light-primary-color: {light_primary_ui_color}
+  primary-color: rgb(1, 133, 116)
+  light-primary-color: rgb(8, 145, 128)
   primary-background-color: rgb(255, 255, 255)
   secondary-background-color: rgb(243, 243, 243)
   divider-color: rgb(102, 102, 102)
