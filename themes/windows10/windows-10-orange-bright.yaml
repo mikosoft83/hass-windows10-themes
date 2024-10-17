@@ -206,11 +206,12 @@ Windows 10 Orange Bright:
               justify-content: left !important;
             }
             
-          "hui-entity-badge $": |
-            .badge {
-              padding: 0px 2px 0px 4px !important;
-              border-radius: 0px !important;
-            }
+          "hui-entity-badge $": 
+            "ha-badge $": |
+              .badge {
+                padding: 0px 0.75em 0px 0.75em !important;
+                border-radius: 0px !important;
+              }
 
 
   # Badge
@@ -365,7 +366,42 @@ Windows 10 Orange Bright:
             background-color: var(--primary-text-color) !important;
             // border-radius: 50%;
           }
-
+    sonos-groups$:
+      sonos-group$: |
+        mwc-list-item[hasmeta] {
+          border-radius: 0;
+        }
+    sonos-grouping$:
+      sonos-grouping-button$: |
+        ha-control-button {
+          --control-button-border-radius: 0;
+        }
+      .: |
+        ha-control-button {
+          --control-button-border-radius: 0;
+        }
+      sonos-volume$:
+        ha-control-slider$: |
+          .slider {
+            border-radius: 0 !important;
+          }
+          .slider-track-bar {
+            border-radius: 0 !important;
+          }
+          
+    sonos-media-browser$:
+      sonos-media-browser-icons$: 
+        .: |
+          .title {
+            color: white !important;
+            font-weight: lighter !important;
+            background-color: var(--primary-color) !important;
+          }
+        ha-control-button$: |
+          button {            
+            border-radius: 0 !important;
+          } 
+          
   card-mod-row-yaml: |
     # Square icon
     "*:first-child$": |
