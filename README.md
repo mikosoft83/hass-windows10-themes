@@ -17,6 +17,7 @@ Themes are supercharged using [card-mod](https://github.com/thomasloven/lovelace
 - More info dialog
 - [Vacuum card](https://github.com/denysdovhan/vacuum-card) by Denys Dovhan
 - [Mini graph card](https://github.com/kalkih/mini-graph-card) by kalkih
+- [Sonos card](https://github.com/punxaphil/custom-sonos-card) by punxaphil
 
 I highly recommend installing card-mod (available in HACS) to fully embrace this theme.
 
