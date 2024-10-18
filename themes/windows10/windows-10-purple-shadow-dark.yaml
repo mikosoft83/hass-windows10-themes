@@ -332,6 +332,9 @@ Windows 10 Purple Shadow Dark:
             [class*="slider"] {
               border-radius: 0px !important;
             }
+            .slider .slider-track-background {
+              background: none !important;
+            }
             .slider .slider-track-bar {
               top: 40% !important;
               bottom: 0px !important;
@@ -340,17 +343,24 @@ Windows 10 Purple Shadow Dark:
             .slider .slider-track-bar::after {
               top: 0px !important;
               bottom: 0px !important;
-              right: 0px !important;
+              right: calc(var(--control-slider-thickness) * -0.2) !important;
               height: 200% !important;
+              width: auto !important;
               aspect-ratio: 1 / 1 !important;
               background-color: var(--primary-text-color) !important;
-              // border-radius: 50%;
+              border-radius: 50% !important;
+            }
+            .tooltip {
+              border-radius: 0px !important;
             }
     sonos-volumes$: 
       sonos-volume$: 
         ha-control-slider$: |
           [class*="slider"] {
             border-radius: 0px !important;
+          }
+          .slider .slider-track-background {
+            background: none !important;
           }
           .slider .slider-track-bar {
             top: 40% !important;
@@ -360,11 +370,15 @@ Windows 10 Purple Shadow Dark:
           .slider .slider-track-bar::after {
             top: 0px !important;
             bottom: 0px !important;
-            right: 0px !important;
+            right: calc(var(--control-slider-thickness) * -0.2) !important;
             height: 200% !important;
+            width: auto !important;
             aspect-ratio: 1 / 1 !important;
             background-color: var(--primary-text-color) !important;
-            // border-radius: 50%;
+            border-radius: 50% !important;
+          }
+          .tooltip {
+            border-radius: 0px !important;
           }
     sonos-groups$:
       sonos-group$: |
