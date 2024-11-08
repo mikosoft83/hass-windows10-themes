@@ -142,6 +142,11 @@ Windows 10 Mod Red:
   paper-dialog-background-color: var(--card-background-color)
   paper-listbox-background-color: var(--background-color)
   paper-card-background-color: var(--card-background-color)
+  # Sections 
+  ha-view-sections-column-gap: 8px
+  ha-heading-card-title-color: var(--primary-color)
+  ha-heading-card-title-font-size: 20px
+  ha-heading-card-title-line-height: 30px
   # Switches
   switch-checked-button-color: var(--primary-color)
   switch-checked-track-color:  var(--primary-color)
@@ -181,9 +186,8 @@ Windows 10 Mod Red:
   hacs-new-color: var(--primary-color)
   link-text-color: var(--primary-color)
   # card mod
-  # Badges aligned left
   card-mod-view-yaml: |
-    # old style
+    # Badges aligned left old style
     "*:first-child$": |
       .badges, #badges {
       display: flex !important;
@@ -192,8 +196,35 @@ Windows 10 Mod Red:
       justify-content: left !important;
       }
 
-    # 2024.8 style
+    "hui-sections-view $": 
+        # Badges aligned left sections
+        "hui-view-badges $": 
+          #.: |
+          #  :host {
+          #    margin: 8px !important;
+          #  }
+          #  .badges, #badges {
+          #    display: flex !important;
+          #    justify-content: flex-start;
+          #    margin: 0px !important;
+          #    justify-content: left !important;
+          #  }
+            
+          "hui-entity-badge $": 
+            "ha-badge $": |
+              .badge {
+                padding: 0px 0.75em 0px 0.75em !important;
+                border-radius: 0px !important;
+              }
+        "hui-grid-section $":
+          .: |
+            /* Header card height */
+            .card.fit-rows {
+              height: auto !important;
+            }
+
     "hui-masonry-view $": 
+        # Badges aligned left 2024.8 style
         "hui-view-badges $": 
           .: |
             :host {
@@ -272,6 +303,9 @@ Windows 10 Mod Red:
   # Misc cards
   card-mod-card-yaml: |
     .: |
+      ha-card.type-heading .content {
+        --mdc-icon-size: 22px !important;
+      }
       /* Custom vacuum card */
       ha-card.type-custom-vacuum-card {
         border-radius: 0px;
