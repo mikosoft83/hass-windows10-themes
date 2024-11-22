@@ -216,6 +216,9 @@ Windows 10 Blue Gray:
                 padding: 0px 0.75em 0px 0.75em !important;
                 border-radius: 0px !important;
               }
+              ::slotted(img[slot="icon"]) {
+                border-radius: 0px !important;
+              }
         "hui-grid-section $":
           .: |
             /* Header card height */
@@ -243,7 +246,9 @@ Windows 10 Blue Gray:
                 padding: 0px 0.75em 0px 0.75em !important;
                 border-radius: 0px !important;
               }
-
+              ::slotted(img[slot="icon"]) {
+                border-radius: 0px !important;
+              }
 
   # Badge
   card-mod-badge-yaml: |
