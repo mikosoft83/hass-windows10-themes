@@ -32,6 +32,17 @@ Windows 10 Cool Blue:
   secondary-background-color: rgb(243, 243, 243)
   divider-color: rgb(102, 102, 102)
   accent-color: var(--primary-color)
+  ha-color-primary-05: rgb(4, 12, 15)
+  ha-color-primary-10: rgb(9, 25, 30)
+  ha-color-primary-20: rgb(18, 50, 61)
+  ha-color-primary-30: rgb(26, 75, 92)
+  ha-color-primary-40: rgb(36, 100, 123)
+  ha-color-primary-50: rgb(45, 125, 154)
+  ha-color-primary-60: rgb(62, 162, 198)
+  ha-color-primary-70: rgb(110, 185, 212)
+  ha-color-primary-80: rgb(158, 208, 226)
+  ha-color-primary-90: rgb(206, 231, 240)
+  ha-color-primary-95: rgb(230, 243, 247)
   # Header:
   app-header-background-color: var(--primary-color)
   app-header-text-color: rgb(255, 255, 255)
@@ -185,6 +196,23 @@ Windows 10 Cool Blue:
   hacs-status-not-loaded: var(--disabled-text-color)
   hacs-new-color: var(--primary-color)
   link-text-color: var(--primary-color)
+  # (non)Rounded corners
+  ha-card-border-radius: 0px
+  ha-dialog-border-radius: var(--ha-card-border-radius)
+  ha-config-card-border-radius: var(--ha-card-border-radius)
+  feature-border-radius: var(--ha-card-border-radius)
+  ha-button-radius: var(--ha-card-border-radius)
+  ha-border-radius-sm: var(--ha-card-border-radius)
+  ha-border-radius-md: var(--ha-card-border-radius)
+  ha-border-radius-lg: var(--ha-card-border-radius)
+  ha-border-radius-xl: 16px
+  ha-border-radius-2xl: var(--ha-card-border-radius)
+  ha-border-radius-3xl: var(--ha-card-border-radius)
+  ha-border-radius-4xl: var(--ha-card-border-radius)
+  ha-border-radius-5xl: var(--ha-card-border-radius)
+  ha-border-radius-6xl: var(--ha-card-border-radius)
+  ha-badge-border-radius: var(--ha-card-border-radius)
+  #ha-border-radius-circle: 0%
   # card mod
   card-mod-view-yaml: |
     # Badges aligned left old style
@@ -264,6 +292,9 @@ Windows 10 Cool Blue:
         padding: 0px;
         margin: 4px;
         box-shadow: none;
+      }
+      img {
+        border-radius: 0% !important;
       }
     ha-state-label-badge $ ha-label-badge $: |
             .label-badge {
