@@ -32,6 +32,17 @@
   secondary-background-color: rgb(243, 243, 243)
   divider-color: rgb(102, 102, 102)
   accent-color: var(--primary-color)
+  ha-color-primary-05: {p05_color}
+  ha-color-primary-10: {p10_color}
+  ha-color-primary-20: {p20_color}
+  ha-color-primary-30: {p30_color}
+  ha-color-primary-40: {p40_color}
+  ha-color-primary-50: {primary_ui_color}
+  ha-color-primary-60: {p60_color}
+  ha-color-primary-70: {p70_color}
+  ha-color-primary-80: {p80_color}
+  ha-color-primary-90: {p90_color}
+  ha-color-primary-95: {p95_color}
   # Header:
   app-header-background-color: var(--primary-color)
   app-header-text-color: rgb(255, 255, 255)
@@ -185,6 +196,23 @@
   hacs-status-not-loaded: var(--disabled-text-color)
   hacs-new-color: var(--primary-color)
   link-text-color: var(--primary-color)
+  # (non)Rounded corners
+  ha-card-border-radius: 0px
+  ha-dialog-border-radius: var(--ha-card-border-radius)
+  ha-config-card-border-radius: var(--ha-card-border-radius)
+  feature-border-radius: var(--ha-card-border-radius)
+  ha-button-radius: var(--ha-card-border-radius)
+  ha-border-radius-sm: var(--ha-card-border-radius)
+  ha-border-radius-md: var(--ha-card-border-radius)
+  ha-border-radius-lg: var(--ha-card-border-radius)
+  ha-border-radius-xl: 16px
+  ha-border-radius-2xl: var(--ha-card-border-radius)
+  ha-border-radius-3xl: var(--ha-card-border-radius)
+  ha-border-radius-4xl: var(--ha-card-border-radius)
+  ha-border-radius-5xl: var(--ha-card-border-radius)
+  ha-border-radius-6xl: var(--ha-card-border-radius)
+  ha-badge-border-radius: var(--ha-card-border-radius)
+  #ha-border-radius-circle: 0%
   # card mod
   card-mod-view-yaml: |
     # Badges aligned left old style
@@ -216,6 +244,9 @@
                 padding: 0px 0.75em 0px 0.75em !important;
                 border-radius: 0px !important;
               }
+              ::slotted(img[slot="icon"]) {
+                border-radius: 0px !important;
+              }
         "hui-grid-section $":
           .: |
             /* Header card height */
@@ -243,7 +274,9 @@
                 padding: 0px 0.75em 0px 0.75em !important;
                 border-radius: 0px !important;
               }
-
+              ::slotted(img[slot="icon"]) {
+                border-radius: 0px !important;
+              }
 
   # Badge
   card-mod-badge-yaml: |
@@ -259,6 +292,9 @@
         padding: 0px;
         margin: 4px;
         box-shadow: none;
+      }
+      img {
+        border-radius: 0% !important;
       }
     ha-state-label-badge $ ha-label-badge $: |
             .label-badge {

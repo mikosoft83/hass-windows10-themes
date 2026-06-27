@@ -23,22 +23,9 @@ I highly recommend installing card-mod (available in HACS) to fully embrace this
 
 ## Screenshots
 
-![blue](w10ss1.png)
+![light](w10uss1.png)
 
-![orange](w10ss2.png)
-
-![green](w10ss3.png)
-
-![yellow](w10ss4.png)
-
-![teal](w10ss5.png)
-
-![rose](w10ss6.png)
-
-
-## TODO
-
-- Acrylic
+![dark](w10uss2.png)
 
 ## Installation
 

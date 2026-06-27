@@ -2,28 +2,6 @@ template = open("template.yaml").read().split("# card mod")
 
 template_f_string = 'f"""' + template[0] + '"""'
 
-'''
-def rgb_to_hsv(r, g, b):
-    r, g, b = r / 255.0, g / 255.0, b / 255.0
-    mx = max(r, g, b)
-    mn = min(r, g, b)
-    df = mx - mn
-    if mx == mn:
-        h = 0
-    elif mx == r:
-        h = (60 * ((g - b) / df) + 360) % 360
-    elif mx == g:
-        h = (60 * ((b - r) / df) + 120) % 360
-    elif mx == b:
-        h = (60 * ((r - g) / df) + 240) % 360
-    if mx == 0:
-        s = 0
-    else:
-        s = (df / mx) * 100
-    v = mx * 100
-    return h, s, v
-'''
-
 def rgb_to_hsv(r, g, b):
     r, g, b = r / 255.0, g / 255.0, b / 255.0
     mx = max(r, g, b)
@@ -44,29 +22,6 @@ def rgb_to_hsv(r, g, b):
     v = mx
     return h, s, v
 
-'''
-def hsv_to_rgb(h, s, v):
-    if s == 0.0:
-        return (v, v, v)
-    i = int(h * 6.0)
-    f = (h * 6.0) - i
-    p, q, t = v * (1.0 - s), v * (1.0 - s * f), v * (1.0 - s * (1.0 - f))
-    i %= 6
-    if i == 0:
-        return (v, t, p)
-    if i == 1:
-        return (q, v, p)
-    if i == 2:
-        return (p, v, t)
-    if i == 3:
-        return (p, q, v)
-    if i == 4:
-        return (t, p, v)
-    if i == 5:
-        return (v, p, q)
-
-'''
-
 def hsv_to_rgb(h, s, v):
     c = v * s
     x = c * (1.0 - abs((h / 60.0) % 2.0 - 1.0))
@@ -85,6 +40,72 @@ def hsv_to_rgb(h, s, v):
     if i == 5:
         ar, ag, ab = c, 0.0, x
     return (int((ar + m)*255), int((ag + m)*255), int((ab + m)*255))
+
+def rgb_to_hsl(r, g, b):
+    r, g, b = r / 255.0, g / 255.0, b / 255.0
+    mx = max(r, g, b)
+    mn = min(r, g, b)
+    dl = mx - mn
+    l = (mx + mn) / 2
+    if dl == 0:
+        h = 0
+        s = 0
+    else:
+        if l < 0.5:
+            s = dl / (mx + mn)
+        else:
+            s = dl / (2 - mx - mn)
+    dr = (((mx - r) / 6) + (dl / 2)) / dl
+    dg = (((mx - g) / 6) + (dl / 2)) / dl
+    db = (((mx - b) / 6) + (dl / 2)) / dl
+
+    if r == mx:
+        h = db - dg
+    elif g == mx:
+        h = (1 / 3) + dr - db
+    elif b == mx:
+        h = (2 / 3) + dg - dr
+
+    if h < 0:
+        h = h + 1
+    if h > 1:
+        h = h - 1
+    return h, s, l
+
+def hue_2_rgb(v1, v2, vh):
+    if vh < 0:
+        vh += 1
+    if vh > 1:
+        vh -= 1
+    if (6 * vh) < 1:
+        return v1 + (v2 - v1) * 6 * vh
+    if (2 * vh) < 1:
+        return v2
+    if (3 * vh) < 2:
+        return v1 + (v2 - v1) * ((2/3) - vh) * 6
+    return v1
+
+
+def hsl_to_rgb(h, s, l):
+    if s == 0:
+        r = g = b = int(l * 255)
+    else:
+        if l < 0.5:
+            var2 = l * (1 + s)
+        else:
+            var2 = (l + s) - (s * l)
+
+        var1 = 2 * l - var2
+
+        r = int(255 * hue_2_rgb(var1, var2, h + 1/3))
+        g = int(255 * hue_2_rgb(var1, var2, h))
+        b = int(255 * hue_2_rgb(var1, var2, h - 1/3))
+
+    return r, g, b
+
+def rgb_str(rgb):
+    r, g, b = rgb
+    return f"rgb({r}, {g}, {b})"
 
 for theme_color_name, theme_color in {
 	"Blue Gray": [105, 121, 126],
@@ -137,17 +158,27 @@ for theme_color_name, theme_color in {
 	"Violet Red Light": [177, 70, 194],
 	"Yellow Gold": [255, 185, 0],
 }.items():
-	theme_name = f"Windows 10 {theme_color_name}"
-	primary_ui_color = [str(color) for color in theme_color]
-	primary_ui_color = f"rgb({', '.join(primary_ui_color)})"
-	h, s, v = rgb_to_hsv(*theme_color)
-	light_primary_ui_color = [h, max(0, s - 0.05), min(1, v + 0.05)]
-	light_primary_ui_color = list(hsv_to_rgb(*light_primary_ui_color))
-#        light_primary_ui_color = [round(color) for color in light_primary_ui_color]
-	light_primary_ui_color = [str(color) for color in light_primary_ui_color]
-	light_primary_ui_color = f"rgb({', '.join(light_primary_ui_color)})"
-	with open(
-		fr"..\{theme_name.lower().replace(' ', '-')}.yaml", "w"
-	) as theme_file:
-		theme_file.write(eval(template_f_string) + "# card mod" + template[1])
-		print("Wrote to " + theme_file.name)
+    theme_name = f"Windows 10 {theme_color_name}"
+    primary_ui_color = [str(color) for color in theme_color]
+    primary_ui_color = f"rgb({', '.join(primary_ui_color)})"
+    h, s, v = rgb_to_hsv(*theme_color)
+    hh, ss, ll = rgb_to_hsl(*theme_color)
+    light_primary_ui_color = [h, max(0, s - 0.05), min(1, v + 0.05)]
+    light_primary_ui_color = rgb_str(list(hsv_to_rgb(*light_primary_ui_color)))
+#    light_primary_ui_color = [str(color) for color in light_primary_ui_color]
+#    light_primary_ui_color = f"rgb({', '.join(light_primary_ui_color)})"
+    p05_color = rgb_str(list(hsl_to_rgb(hh, ss, ll * 2 * 0.05 )))
+    p10_color = rgb_str(list(hsl_to_rgb(hh, ss, ll * 2 * 0.10 )))
+    p20_color = rgb_str(list(hsl_to_rgb(hh, ss, ll * 2 * 0.20 )))
+    p30_color = rgb_str(list(hsl_to_rgb(hh, ss, ll * 2 * 0.30 )))
+    p40_color = rgb_str(list(hsl_to_rgb(hh, ss, ll * 2 * 0.40 )))
+    p60_color = rgb_str(list(hsl_to_rgb(hh, ss, ll + 2 * (0.60 - 0.5) * (1 - ll) )))
+    p70_color = rgb_str(list(hsl_to_rgb(hh, ss, ll + 2 * (0.70 - 0.5) * (1 - ll) )))
+    p80_color = rgb_str(list(hsl_to_rgb(hh, ss, ll + 2 * (0.80 - 0.5) * (1 - ll) )))
+    p90_color = rgb_str(list(hsl_to_rgb(hh, ss, ll + 2 * (0.90 - 0.5) * (1 - ll) )))
+    p95_color = rgb_str(list(hsl_to_rgb(hh, ss, ll + 2 * (0.95 - 0.5) * (1 - ll) )))
+    with open(
+        fr"..\{theme_name.lower().replace(' ', '-')}.yaml", "w"
+    ) as theme_file:
+        theme_file.write(eval(template_f_string) + "# card mod" + template[1])
+        print("Wrote to " + theme_file.name)
