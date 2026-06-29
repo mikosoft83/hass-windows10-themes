@@ -197,7 +197,6 @@ Windows 10 Cool Blue Bright:
   hacs-new-color: var(--primary-color)
   link-text-color: var(--primary-color)
   # (non)Rounded corners
-  ha-card-border-radius: 0px
   ha-dialog-border-radius: var(--ha-card-border-radius)
   ha-config-card-border-radius: var(--ha-card-border-radius)
   feature-border-radius: var(--ha-card-border-radius)
